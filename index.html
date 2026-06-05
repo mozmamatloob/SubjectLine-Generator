@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Email Subject Line Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="main-wrapper">
+        <header class="hero-section">
+            <div class="hero-content">
+                <div class="logo">
+                    <i class="fas fa-paper-plane"></i> SubjectGen<span>AI</span>
+                </div>
+                <h1>Create Irresistible Email Subject Lines</h1>
+                <p>Boost your open rates with AI-powered subject lines tailored to your audience and industry.</p>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="input-card">
+                <h2><i class="fas fa-magic"></i> Generate New Lines</h2>
+                
+                <div class="form-group">
+                    <label for="prompt">What is your email about? <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lightbulb input-icon"></i>
+                        <input type="text" id="prompt" placeholder="e.g., Summer Sale, New Feature Launch, Webinar Invite">
+                    </div>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="tone">Tone </label>
+                        <div class="select-wrapper">
+                            <i class="fas fa-feather-alt input-icon"></i>
+                            <select id="tone">
+                                <option value="Professional">Professional</option>
+                                <option value="Urgent">Urgent / FOMO</option>
+                                <option value="Witty">Witty / Funny</option>
+                                <option value="Curious">Curious</option>
+                                <option value="Empathetic">Empathetic</option>
+                                <option value="Bold">Bold</option>
+                            </select>
+                        </div>
+                        <small class="helper-text">Formal, Sales, Fun, Suspense, Support, or Direct?</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="audience">Target Audience</label>
+                        <div class="select-wrapper">
+                            <i class="fas fa-users input-icon"></i>
+                            <select id="audience">
+                                <option value="General">General Public</option>
+                                <option value="C-Level">C-Level Executives / Managers</option>
+                                <option value="Gen Z">Students / Gen Z</option>
+                                <option value="Existing Customers">Existing Customers</option>
+                                <option value="Cold Leads">Cold Leads (New)</option>
+                                <option value="Techies">Techies / Developers</option>
+                                <option value="Parents">Stay-at-home Parents</option>
+                            </select>
+                        </div>
+                        <small class="helper-text">Short, Trendy, Loyal, Trust-building, or Technical?</small>
+                    </div>
+
+        
+                    <div class="form-group">
+                        <label for="industry">Industry</label>
+                        <div class="select-wrapper">
+                            <i class="fas fa-briefcase input-icon"></i>
+                            <select id="industry">
+                                <option value="General">General</option>
+                                <option value="E-commerce">E-commerce / Fashion</option>
+                                <option value="SaaS">SaaS / Tech</option>
+                                <option value="Real Estate">Real Estate</option>
+                                <option value="Health">Health & Wellness</option>
+                                <option value="Education">Education / EdTech</option>
+                                <option value="Finance">Finance / Banking</option>
+                            </select>
+                        </div>
+                        <small class="helper-text">Uses industry-specific keywords</small>
+                    </div>
+                </div>
+                 
+                <button onclick="generateLines()" class="generate-btn">
+                    <span>Generate Subject Lines</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+
+            <div id="results-container" class="results-container">
+
+                <div class="placeholder-state">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Your generated subject lines will appear here</h3>
+                    <p>Fill in the details above and click generate</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2026 SubjectGenAI. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
